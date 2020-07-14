@@ -260,6 +260,6 @@ class __TwigTemplate_02cf384c9e7988433b0d8090665c5fae601733653fb233928e150a73c10
 </div>
 
 {% endblock %}
-", "person/index.html.twig", "C:\\xampp\\htdocs\\templates\\person\\index.html.twig");
+", "person/index.html.twig", "C:\\xampp\\htdocs\\backend\\templates\\person\\index.html.twig");
     }
 }

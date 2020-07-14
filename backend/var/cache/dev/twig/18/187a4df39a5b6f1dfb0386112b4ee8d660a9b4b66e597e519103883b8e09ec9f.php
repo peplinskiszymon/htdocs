@@ -85,7 +85,7 @@ class __TwigTemplate_39a96ffaa6fb1e2ae83072873a6e28cdc020741a37f955c474022757e4f
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "Junior PHP Developer - Zadanie
+        echo "Junior PHP Developer - Zadanie do wykonania
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -117,8 +117,8 @@ class __TwigTemplate_39a96ffaa6fb1e2ae83072873a6e28cdc020741a37f955c474022757e4f
 {% block title %}Strona główna{% endblock %}
 
 {% block body %}
-Junior PHP Developer - Zadanie
+Junior PHP Developer - Zadanie do wykonania
 {% endblock %}
-", "index/index.html.twig", "C:\\xampp\\htdocs\\templates\\index\\index.html.twig");
+", "index/index.html.twig", "C:\\xampp\\htdocs\\backend\\templates\\index\\index.html.twig");
     }
 }

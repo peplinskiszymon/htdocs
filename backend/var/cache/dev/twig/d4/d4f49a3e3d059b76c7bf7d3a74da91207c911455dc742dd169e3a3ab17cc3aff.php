@@ -242,6 +242,6 @@ class __TwigTemplate_99a0be2aafbcac824170a5f43a162777c1efae97cb6d8e6b895426a3658
 </div>
 
 {% endblock %}
-", "group/index.html.twig", "C:\\xampp\\htdocs\\templates\\group\\index.html.twig");
+", "group/index.html.twig", "C:\\xampp\\htdocs\\backend\\templates\\group\\index.html.twig");
     }
 }

@@ -303,6 +303,6 @@ class __TwigTemplate_85b29a4062f2c1678feb691ae51070045666905bc024a9eea29b2795a92
 
         {% endblock %}
     </body>
-</html>", "base.html.twig", "C:\\xampp\\htdocs\\templates\\base.html.twig");
+</html>", "base.html.twig", "C:\\xampp\\htdocs\\backend\\templates\\base.html.twig");
     }
 }
