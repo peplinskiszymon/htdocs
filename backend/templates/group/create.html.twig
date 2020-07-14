@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Group Create{% endblock %}
+
+{% block body %}
+<div class="container">
+    {% form_theme form 'bootstrap_4_layout.html.twig' %}
+    {{ form_start(form) }}
+    {{ form_row(form.name) }}
+    {{ form_row(form.info) }}
+        <button class="btn btn-lg btn-primary mt-3" type="submit">
+            Create
+        </button>
+    {{ form_end(form) }}
+</div>
+{% endblock %}

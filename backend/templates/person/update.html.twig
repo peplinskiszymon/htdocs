@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Persons Update{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    {% form_theme form 'bootstrap_4_layout.html.twig' %}
+    {{ form_start(form) }}
+    {{ form_row(form.login, {'value' : person.login }) }}
+    {{ form_row(form.last_name, {'value' : person.lastname }) }}
+    {{ form_row(form.first_name, {'value' : person.firstname }) }}
+    {{ form_row(form.group, {'value' : person.group.name|default('Undefined') }) }}
+        <button class="btn btn-lg btn-primary mt-3" type="submit">
+            Update
+        </button>
+    {{ form_end(form) }}
+</div>
+
+{% endblock %}

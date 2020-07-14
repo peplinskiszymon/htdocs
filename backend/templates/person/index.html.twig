@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Persons{% endblock %}
+
+{% block body %}
+
+
+
+<div class="content">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Login</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Created At</th>
+      <th scope="col">Updated At</th>
+      <th scope="col">Group</th>
+      <th scope="col">Options</th>
+    </tr>
+  </thead>
+  <tbody>
+
+{% for person in persons %} 
+    <tr>   
+      <th scope="row">{{loop.index}}</th>
+      <td>{{person.login}}</td>
+      <td>{{person.lastname}}</td>
+      <td>{{person.firstname}}</td>
+      <td>{{person.createdat|date('d.m.Y H:i:s')}}</td>
+      <td>{{person.updatedat|date('d.m.Y H:i:s')}}</td>
+      <td>{{person.group.name|default('Undefined')}}</td>
+      <td>
+      <a href="{{ path('person_update', {'id' : person.id })}}" class="btn btn-primary mb-5">Update</a>
+      <a href="{{ path('person_remove', {'id' : person.id })}}" class="btn btn-primary mb-5">Delete</a>
+      </td>
+          </tr>
+{% endfor %}
+
+  </tbody>
+</table>
+
+<a href="{{ path('person_create')}}" class="btn btn-primary mb-5">AddNew</a>
+</div>
+
+{% endblock %}

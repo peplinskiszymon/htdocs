@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Groups{% endblock %}
+
+{% block body %}
+
+<div class="content">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Info</th>
+      <th scope="col">Created At</th>
+      <th scope="col">Updated At</th>
+      <th scope="col">Options</th>
+    </tr>
+  </thead>
+  <tbody>
+
+{% for group in groups %} 
+    <tr>   
+      <th scope="row">{{loop.index}}</th>
+      <td>{{group.name}}</td>
+      <td>{{group.info}}</td>
+      <td>{{group.createdat|date('d.m.Y H:i:s')}}</td>
+      <td>{{group.updatedat|date('d.m.Y H:i:s')}}</td>
+      <td>
+      <a href="{{ path('group_update', {'id' : group.id })}}" class="btn btn-primary mb-5">Update</a>
+      <a href="{{ path('group_remove', {'id' : group.id })}}" class="btn btn-primary mb-5">Delete</a>
+      </td>
+          </tr>
+{% endfor %}
+
+  </tbody>
+</table>
+
+<a href="{{ path('group_create')}}" class="btn btn-primary mb-5">AddNew</a>
+</div>
+
+{% endblock %}
