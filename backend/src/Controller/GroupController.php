@@ -72,10 +72,11 @@ class GroupController extends AbstractController
 
     public function group_update(int $id, Request $request){
 
-        $form = $this->createForm(GroupType::class);
-
+        
         $em = $this->getDoctrine()->getManager();
         $updateGroup = $em->getRepository(Group::class)->find($id);
+
+        $form = $this->createForm(GroupType::class, $updateGroup);
 
         $form->handleRequest($request);
 
@@ -98,7 +99,6 @@ class GroupController extends AbstractController
 
         return $this->render('group/update.html.twig', [
             'form' => $form->createView(),
-            'group' => $updateGroup,
         ]);
     }
 

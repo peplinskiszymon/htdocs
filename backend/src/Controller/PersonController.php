@@ -76,25 +76,25 @@ class PersonController extends AbstractController
 
     public function person_update(int $id, Request $request){
 
-        $form = $this->createForm(PersonType::class);
-
+       
         $em = $this->getDoctrine()->getManager();
-        $updateperson = $em->getRepository(Person::class)->find($id);
+        $updatePerson = $em->getRepository(Person::class)->find($id);
+
+        $form = $this->createForm(PersonType::class, $updatePerson);
 
         $form->handleRequest($request);
-
 
         if($form->isSubmitted() && $form->isValid()){
 
             try {
 
-                $updateperson->setLogin($form->get('login')->getData());
-                $updateperson->setLastName($form->get('last_name')->getData());
-                $updateperson->setFirstName($form->get('first_name')->getData());
-                $updateperson->setUpdatedAt(new \DateTime());
-                $updateperson->setGroup($form->get('group')->getData());
+                $updatePerson->setLogin($form->get('login')->getData());
+                $updatePerson->setLastName($form->get('last_name')->getData());
+                $updatePerson->setFirstName($form->get('first_name')->getData());
+                $updatePerson->setUpdatedAt(new \DateTime());
+                $updatePerson->setGroup($form->get('group')->getData());
 
-                $em->persist($updateperson);
+                $em->persist($updatePerson);
                 $em->flush();
 
                 $this->addFlash('success','Person update');
@@ -105,7 +105,6 @@ class PersonController extends AbstractController
 
         return $this->render('person/update.html.twig', [
             'form' => $form->createView(),
-            'person' => $updateperson,
         ]);
 
     }

@@ -95,11 +95,11 @@ class __TwigTemplate_4e9ebbd9bb44abd9de1fe97c896a1ec6b576f90c6b39aee43a279355e31
         echo "
     ";
         // line 9
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 9, $this->source); })()), "name", [], "any", false, false, false, 9), 'row', ["value" => twig_get_attribute($this->env, $this->source, (isset($context["group"]) || array_key_exists("group", $context) ? $context["group"] : (function () { throw new RuntimeError('Variable "group" does not exist.', 9, $this->source); })()), "name", [], "any", false, false, false, 9)]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 9, $this->source); })()), "name", [], "any", false, false, false, 9), 'row');
         echo "
     ";
         // line 10
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 10, $this->source); })()), "info", [], "any", false, false, false, 10), 'row', ["value" => twig_get_attribute($this->env, $this->source, (isset($context["group"]) || array_key_exists("group", $context) ? $context["group"] : (function () { throw new RuntimeError('Variable "group" does not exist.', 10, $this->source); })()), "info", [], "any", false, false, false, 10)]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 10, $this->source); })()), "info", [], "any", false, false, false, 10), 'row');
         echo "
         <button class=\"btn btn-lg btn-primary mt-3\" type=\"submit\">
             Update
@@ -143,8 +143,8 @@ class __TwigTemplate_4e9ebbd9bb44abd9de1fe97c896a1ec6b576f90c6b39aee43a279355e31
 <div class=\"container\">
     {% form_theme form 'bootstrap_4_layout.html.twig' %}
     {{ form_start(form) }}
-    {{ form_row(form.name, {'value' : group.name }) }}
-    {{ form_row(form.info, {'value' : group.info }) }}
+    {{ form_row(form.name) }}
+    {{ form_row(form.info) }}
         <button class=\"btn btn-lg btn-primary mt-3\" type=\"submit\">
             Update
         </button>

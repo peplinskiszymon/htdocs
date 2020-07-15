@@ -6,8 +6,8 @@
 <div class="container">
     {% form_theme form 'bootstrap_4_layout.html.twig' %}
     {{ form_start(form) }}
-    {{ form_row(form.name, {'value' : group.name }) }}
-    {{ form_row(form.info, {'value' : group.info }) }}
+    {{ form_row(form.name) }}
+    {{ form_row(form.info) }}
         <button class="btn btn-lg btn-primary mt-3" type="submit">
             Update
         </button>
